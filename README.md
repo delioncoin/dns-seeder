@@ -1,1 +1,1 @@
-# dns-seeder
+# Delion DNS Seeder
