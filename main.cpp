@@ -153,7 +153,10 @@ public:
         filter_whitelist.insert(13);
     }
     if (host != NULL && ns == NULL) showHelp = true;
-    if (showHelp) fprintf(stderr, help, argv[0]);
+    if (showHelp){
+ 	    fprintf(stderr, help, argv[0]);
+ 	    exit(0);
+    }
   }
 };
 
