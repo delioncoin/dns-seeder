@@ -80,7 +80,7 @@ class CNode {
     CAddress me(CService("0.0.0.0"));
     BeginMessage("version");
     int nBestHeight = GetRequireHeight();
-    string ver = "/gossip-seeder:0.0.1/";
+    string ver = "/delion-seeder:0.0.2/";
     vSend << PROTOCOL_VERSION << nLocalServices << nTime << you << me << nLocalNonce << ver << nBestHeight;
     EndMessage();
   }
@@ -295,14 +295,3 @@ bool TestNode(const CService &cip, int &ban, int &clientV, std::string &clientSV
     return false;
   }
 }
-
-/*
-int main(void) {
-  CService ip("80.211.195.49", 22123, true);
-  vector<CAddress> vAddr;
-  vAddr.clear();
-  int ban = 0;
-  bool ret = TestNode(ip, ban, vAddr);
-  printf("ret=%s ban=%i vAddr.size()=%i\n", ret ? "good" : "bad", ban, (int)vAddr.size());
-}
-*/
